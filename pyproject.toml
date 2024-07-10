@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=46.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "thread-to-speech"
+version = "1.0.0"
+description = "Convert a reddit, 4chan or x thread to speech"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+authors = [
+    { name = "NotJoeMartinez", email = "notjoemartinez@protonmail.com" }
+]
+keywords = ["Text-To-Speech", "TTS"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: The Unlicense (Unlicense)", 
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "beautifulsoup4==4.12.3",
+    "certifi==2024.7.4",
+    "charset-normalizer==3.3.2",
+    "click==8.1.7",
+    "idna==3.7",
+    "python-dotenv==1.0.1",
+    "requests==2.32.3",
+    "soupsieve==2.5",
+    "urllib3==2.2.2",
+    "rich==13.7.1"
+]
+
+[project.scripts]
+thread-to-speech = "thread_to_speech.thread_to_speech:cli"
+
+[project.urls]
+Homepage = "https://github.com/NotJoeMartinez/thread-to-speech"
